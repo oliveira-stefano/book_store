@@ -8,4 +8,5 @@ Python
 pyvenv.cfg
 .venv
 .ideia/
+__pycache__
 pip-selfcheck.json
