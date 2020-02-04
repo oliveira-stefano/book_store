@@ -19,8 +19,17 @@ services:
       - .:/code
     depends_on:
       - db
+
+  pgadmin:
+    image: dpage/pgadmin4
     environment:
-      FLASK_ENV: development
+      PGADMIN_DEFAULT_EMAIL: "oliveira.stefano@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "123"
+    ports:
+      - "8087:80"
+    depends_on:
+      - db
+
 
 volumes:
   db-postgres:
